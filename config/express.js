@@ -29,7 +29,7 @@ module.exports = function () {
     }));
     app.use(passport.initialize()); // start passport
     app.use(passport.session()); // use session via express-session
-    
+
     var path = require("path");
     app.set('views', path.join(__dirname + '/../app/views/home.html'));
     app.engine('html', require('ejs').renderFile);
@@ -37,6 +37,6 @@ module.exports = function () {
 
     require('../app/routes/index.route')(app);
     require('../app/routes/user.route')(app);
-
+    require('../app/routes/post.route')(app);
     return app;
 }
