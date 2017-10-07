@@ -6,5 +6,5 @@ module.exports = (app) => {
        app.get(path + '/all', post.getAll);
        app.get(path + '/id/:id', post.getOne);
        app.get(path + '/mypost', post.getMyPost);
-       app.post(path + '/post/create', post.create);
+       app.post(path + '/create', post.create);
 }
